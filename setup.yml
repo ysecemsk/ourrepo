@@ -7,5 +7,6 @@
   - name: clone petclinic and ourrepo to home directory
     git: repo=https://github.com/ysecemsk/spring-petclinic.git dest=/home/ec2-user/petclinic
   - name: clone ourrepo and ourrepo to home directory
-    git: repo=https://github.com/ysecemsk/ourrepo.git dest=/home/ec2-user/ourrepo
-  
+    git: repo=https://github.com/ysecemsk/ourrepo.git dest=/home/ec2-user/ourrepo update=no
+  - name: Unarchive a maven zip file that needs to be downloaded (added in 2.0)
+    unarchive: src=http://apache.mivzakim.net/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.zip dest=~/ creates=~/apache-maven-3.3.9 copy=no
